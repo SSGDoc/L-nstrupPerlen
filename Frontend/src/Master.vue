@@ -1,9 +1,7 @@
 <template>
 <div>
-
   <navbar></navbar>
   <footer></footer>
-
 </div>
 </template>
 
