@@ -8,7 +8,7 @@
         <p class="center">Kontakt</p>
         <p class="contact">
           Telefon: 60680085 <br />
-          Mail: hcgs@gmail.com
+          Mail: perlerforsatan@gmail.com
         </p>
       </div>
       <div class="column">
