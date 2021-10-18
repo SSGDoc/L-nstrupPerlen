@@ -18,11 +18,13 @@ class CreateOrderLinesTable extends Migration
             $table->integer('amount');
             $table->float('subtotal');
 
-            $table->bigInteger('productId')->unsigned()->nullable();
+            
             $table->bigInteger('orderId')->unsigned()->nullable();
-
-            $table->foreign('productId')->references('prod_id')->on('products')->onDelete('cascade');
+            $table->bigInteger('productId')->unsigned()->nullable();
+            
             $table->foreign('orderId')->references('order_id')->on('orders')->onDelete('cascade');
+            $table->foreign('productId')->references('prod_id')->on('products')->onDelete('cascade');
+            
         });
     }
 
