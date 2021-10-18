@@ -1,5 +1,5 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -7,38 +7,29 @@
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="hej">
         <li class="nav-item">
-          <router-link to="/">
-            <a class="nav-link" aria-current="page">Forside</a>
-          </router-link>
+            <a class="nav-link" aria-current="page">Hjem</a>
         </li>
 
-        <li class="nav-item">
-          <router-link to="Services">
-            <a class="nav-link" aria-current="page">Services</a>
-          </router-link>
-        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
 
-        <!-- <li class="nav-item">
-          <router-link to="Gallery">
-            <a class="nav-link" aria-current="page">Galleri</a>
-          </router-link>
-        </li> -->
-
         <li class="nav-item">
-          <router-link to="Contact">
-            <a class="nav-link" aria-current="page">Kontakt</a>
-          </router-link>
+
+            <a class="nav-link" aria-current="page">Om os</a>
         </li>
         
         <li class="nav-item">
-          <router-link to="About">
-            <a class="nav-link" aria-current="page">Om os</a>
-          </router-link>
+            <a class="nav-link" aria-current="page">Kontakt</a>
         </li>
       </ul>
-      <span class="navbar-text">
-      Ring på: 60 68 00 85 og få et tilbud
-    </span>
     </div>
   </div>
 </nav>
@@ -50,7 +41,7 @@
 
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap');
 .navbar-dark .navbar-nav .nav-link {
   font-family: "Archivo";
 }
@@ -82,6 +73,6 @@ a:link { text-decoration: none; }
     transition: top 400ms ease-in-out;
     background-color: #212529;
   }
-}
+} */
 
 </style>
