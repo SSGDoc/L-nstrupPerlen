@@ -17,7 +17,7 @@ class CreateSubCatagoriesTable extends Migration
             $table->bigIncrements('subCat_id');
             $table->string('subCatName');
             $table->string('subCatDescription');
-            $table->binary('subCatImage');
+            $table->binary('subCatImage')->nullable();
 
             $table->bigInteger('catId')->unsigned()->nullable();
             $table->foreign('catId')->references('cat_id')->on('catagories')->onDelete('cascade');

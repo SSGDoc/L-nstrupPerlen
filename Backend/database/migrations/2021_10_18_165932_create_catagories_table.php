@@ -17,7 +17,7 @@ class CreateCatagoriesTable extends Migration
             $table->bigIncrements('cat_id');
             $table->string('catName');
             $table->string('description');
-            $table->binary('catImage');
+            $table->binary('catImage')->nullable();
         });
     }
 

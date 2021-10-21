@@ -17,11 +17,14 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('prod_id');
             $table->float('price');
             $table->string('size');
-            $table->binary('prodImg');
+            $table->binary('prodImg')->nullable();
             $table->bigInteger('catId')->unsigned()->nullable();
             $table->bigInteger('subCatId')->unsigned()->nullable();
+            $table->bigInteger('matId')->unsigned()->nullable();
+            
             $table->foreign('catId')->references('cat_id')->on('catagories')->onDelete('cascade');
             $table->foreign('subCatId')->references('subCat_id')->on('sub_catagories')->onDelete('cascade');
+            $table->foreign('matId')->references('mat_id')->on('materials')->onDelete('cascade');
         });
     }
 

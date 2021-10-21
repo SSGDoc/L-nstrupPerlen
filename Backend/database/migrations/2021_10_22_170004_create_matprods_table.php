@@ -13,14 +13,14 @@ class CreateMatprodsTable extends Migration
      */
     public function up()
     {
-        Schema::create('matprods', function (Blueprint $table) {
-            $table->bigInteger('prodId')->unsigned()->nullable();
-            $table->bigInteger('matId')->unsigned()->nullable();
-            $table->primary(['prodId','matId']);
+        // Schema::create('matprods', function (Blueprint $table) {
+        //     $table->bigInteger('prodId')->unsigned()->nullable();
+        //     $table->bigInteger('matId')->unsigned()->nullable();
+        //     $table->primary(['prodId','matId']);
 
-            $table->foreign('prodId')->references('prod_id')->on('products')->onDelete('cascade');
-            $table->foreign('matId')->references('mat_id')->on('materials')->onDelete('cascade');
-        });
+        //     $table->foreign('prodId')->references('prod_id')->on('products')->onDelete('cascade');
+        //     $table->foreign('matId')->references('mat_id')->on('materials')->onDelete('cascade');
+        // });
     }
 
     /**
