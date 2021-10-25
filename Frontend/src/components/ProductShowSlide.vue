@@ -3,37 +3,28 @@
 <div class="carousel-container">
   <div class="mySlides animate">
     <img src="https://wallpapershome.com/images/pages/pic_h/16239.jpg" alt="slide" />
-    <div class="number">1 / 5</div>
-    <div class="text">Lorem ipsum dolor sit amet consectetur</div>
+    <!-- <div class="text">Lorem ipsum dolor sit amet consectetur</div> -->
   </div>
 
   <div class="mySlides animate">
     <img src="https://wallpapershome.com/images/pages/pic_h/23525.jpg" alt="slide" />
-    <div class="number">2 / 5</div>
-    <div class="text">amet consectetur</div>
+    <!-- <div class="text">amet consectetur</div> -->
   </div>
 
   <div class="mySlides animate">
     <img src="https://wallpapershome.com/images/pages/pic_h/23277.jpg" alt="slide" />
-    <div class="number">3 / 5</div>
-    <div class="text">Lorem ipsum dolor sit</div>
+    <!-- <div class="text">Lorem ipsum dolor sit</div> -->
   </div>
 
   <div class="mySlides animate">
     <img src="https://wallpapershome.com/images/pages/pic_h/12596.jpg" alt="slide" />
-    <div class="number">4 / 5</div>
-    <div class="text">Doloribus quo alias reprehenderit</div>
+    <!-- <div class="text">Doloribus quo alias reprehenderit</div> -->
   </div>
 
   <div class="mySlides animate">
     <img src="https://wallpapershome.com/images/pages/pic_h/23419.jpg" alt="slide" />
-    <div class="number">5 / 5</div>
-    <div class="text">Reprehenderit</div>
+    <!-- <div class="text">Reprehenderit</div> -->
   </div>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" v-on:click="prevSlide()">&#10094;</a>
-  <a class="next" v-on:click="nextSlide()">&#10095;</a>
 
   <!-- The dots/circles -->
   <div class="dots-container">
@@ -136,11 +127,11 @@ body {
 }
 
 .carousel-container {
-  border-radius: 20px;
+  border-radius: 0px;
   overflow: hidden;
-  max-width: 700px;
+  max-width: 100%;
   position: relative;
-  box-shadow: 0 0 100px -20px lightblue;
+  /* box-shadow: 0 0 100px -20px lightblue; */
   margin: auto;
   z-index: 0;
 }
