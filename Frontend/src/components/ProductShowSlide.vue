@@ -3,28 +3,37 @@
 <div class="carousel-container">
   <div class="mySlides animate">
     <img src="https://wallpapershome.com/images/pages/pic_h/16239.jpg" alt="slide" />
-    <!-- <div class="text">Lorem ipsum dolor sit amet consectetur</div> -->
+    <!-- <div class="number">1 / 5</div>
+    <div class="text">Lorem ipsum dolor sit amet consectetur</div> -->
   </div>
 
   <div class="mySlides animate">
     <img src="https://wallpapershome.com/images/pages/pic_h/23525.jpg" alt="slide" />
-    <!-- <div class="text">amet consectetur</div> -->
+    <!-- <div class="number">2 / 5</div>
+    <div class="text">amet consectetur</div> -->
   </div>
 
   <div class="mySlides animate">
     <img src="https://wallpapershome.com/images/pages/pic_h/23277.jpg" alt="slide" />
-    <!-- <div class="text">Lorem ipsum dolor sit</div> -->
+    <!-- <div class="number">3 / 5</div>
+    <div class="text">Lorem ipsum dolor sit</div> -->
   </div>
 
   <div class="mySlides animate">
     <img src="https://wallpapershome.com/images/pages/pic_h/12596.jpg" alt="slide" />
-    <!-- <div class="text">Doloribus quo alias reprehenderit</div> -->
+    <!-- <div class="number">4 / 5</div>
+    <div class="text">Doloribus quo alias reprehenderit</div> -->
   </div>
 
   <div class="mySlides animate">
     <img src="https://wallpapershome.com/images/pages/pic_h/23419.jpg" alt="slide" />
-    <!-- <div class="text">Reprehenderit</div> -->
+    <!-- <div class="number">5 / 5</div>
+    <div class="text">Reprehenderit</div> -->
   </div>
+
+  <!-- Next and previous buttons -->
+  <!-- <a class="prev" v-on:click="prevSlide()">&#10094;</a>
+  <a class="next" v-on:click="nextSlide()">&#10095;</a> -->
 
   <!-- The dots/circles -->
   <div class="dots-container">
@@ -42,8 +51,7 @@ export default {
   data() {
     return {
       slideIndex: 0,
-      timer: 6,
-      Atimer: this.timer,
+      timer: 5,
       error: null,
     };
   },
@@ -52,20 +60,17 @@ export default {
     nextSlide() {
       this.slideIndex++;
       this.showSlides();
-      this.timer = this.Atimer; // reset timer
     },
 
     prevSlide() {
       this.slideIndex--;
       this.showSlides();
-      this.timer = this.Atimer;
     },
 
     // Thumbnail image controlls
     currentSlide(n) {
       this.slideIndex = n - 1;
       this.showSlides();
-      this.timer = this.Atimer;
     },
 
     showSlides() {
@@ -96,10 +101,10 @@ export default {
     // this function runs every 1 second
     setInterval(() => {
       this.timer--;
-
+      
       if (this.timer < 1) {
         this.nextSlide();
-        this.timer = this.Atimer; // reset timer
+        this.timer = 5;
       }
     }, 1000); // 1sec
   },
@@ -127,7 +132,7 @@ body {
 }
 
 .carousel-container {
-  border-radius: 0px;
+  /* border-radius: 20px; */
   overflow: hidden;
   max-width: 100%;
   position: relative;
@@ -179,7 +184,7 @@ body {
 }
 
 /* Caption text */
-.text {
+/* .text {
   color: #f2f2f2;
   background-color: rgba(10, 10, 20, 0.1);
   backdrop-filter: blur(6px);
@@ -191,10 +196,10 @@ body {
   left: 50%;
   transform: translate(-50%);
   text-align: center;
-}
+} */
 
 /* Number text (1/3 etc) */
-.number {
+/* .number {
   color: #f2f2f2;
   font-size: 16px;
   background-color: rgba(173, 216, 230, 0.15);
@@ -204,7 +209,7 @@ body {
   position: absolute;
   top: 10px;
   left: 10px;
-}
+} */
 .dots-container {
   position: absolute;
   bottom: 10px;
