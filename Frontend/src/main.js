@@ -5,4 +5,4 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 import router from './router'
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use($).mount('#app')
