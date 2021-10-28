@@ -23,7 +23,7 @@
 </template>
 
 <script>
-// import axios from "axios";
+import axios from "axios";
 export default {
   name: "Login",
 
@@ -38,25 +38,25 @@ export default {
     };
   },
 
-    // methods: {
-    //   async login() {
-    //     try {
-    //       await axios.get("http://127.0.0.1:8000/sanctum/csrf-cookie");
-    //       const response = await axios.post("http://127.0.0.1:8000/api/login", this.user);
-    //       localStorage.setItem("token", response.data.token);
-    //       localStorage.setItem("user", response.data.user);
-    //       this.$router.push({ path: 'posts' });
-    //     } catch(err){
-    //       alert(err);
-    //       //TODO: Vis "Forkert kodeord" til brugeren
-    //     }
-    //   },
-    // },
-    // mounted(){
-    //   if(localStorage.getItem('token') != null){
-    //     this.$router.push({ path: 'posts' });
-    //   }
-    // }
+    methods: {
+      async login() {
+        try {
+          await axios.get("http://127.0.0.1:8000/sanctum/csrf-cookie");
+          const response = await axios.post("http://127.0.0.1:8000/api/login", this.user);
+          localStorage.setItem("token", response.data.token);
+          localStorage.setItem("user", response.data.user);
+          this.$router.push({ path: 'admin' });
+        } catch(err){
+          alert(err);
+          //TODO: Vis "Forkert kodeord" til brugeren
+        }
+      },
+    },
+    mounted(){
+      if(localStorage.getItem('token') != null){
+        this.$router.push({ path: 'admin' });
+      }
+    }
 };
 </script>
 
