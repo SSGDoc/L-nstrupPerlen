@@ -1,5 +1,6 @@
 <template>
 <div>
+  <div class="logo"> </div>
   <navbar></navbar>
     <div id="main">
       <router-view/>
@@ -29,9 +30,18 @@ export default {
 #main{
 min-height: 100vh;
 margin-bottom: -150px;
+overflow: hidden;
 }
 
 .push{
 height: 150px;
+}
+
+.logo{
+  background-image: url("assets/MidlertidigLogo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100px;
 }
 </style>

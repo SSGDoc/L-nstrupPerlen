@@ -135,6 +135,7 @@ body {
   /* border-radius: 20px; */
   overflow: hidden;
   max-width: 100%;
+  max-height: 100vh;
   position: relative;
   /* box-shadow: 0 0 100px -20px lightblue; */
   margin: auto;

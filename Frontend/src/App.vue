@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
     <master></master>
-  </div>
 </template>
 <script>
 import Master from './Master.vue'
@@ -15,8 +13,11 @@ export default {
 </script>
 
 <style>
+html{
+  scroll-behavior: smooth;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Century Gothic", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
